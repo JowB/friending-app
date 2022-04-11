@@ -31,7 +31,7 @@ export default function Login() {
                 {errors.username && <span className="login-error">Le pseudo est obligatoire</span>}
 
                 {/* include validation with required or other standard HTML validation rules */}
-                <input {...register("password", {required: true})} placeholder="Mot de passe" />
+                <input {...register("password", {required: true})} placeholder="Mot de passe" type="password" />
                 {/* errors will return when field validation fails  */}
                 {errors.password && <span className="login-error">Le mot de passe est obligatoire</span>}
 
