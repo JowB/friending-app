@@ -4,14 +4,11 @@ import axios from "axios";
 import Link from "next/link";
 
 export default function Login() {
-    // const {setToken} = useUser();
-
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
     const onSubmit = data => {
         axios.post('http://localhost:3001/auth/login', data)
             .then(response => {
                 console.log(response.data);
-                //setToken(response.data.access_token)
             })
     };
 
@@ -25,7 +22,7 @@ export default function Login() {
                 </Link>
             </div>
             <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-                <h1>Connexion</h1>
+                <h1>Inscription</h1>
                 {/* register your input into the hook by invoking the "register" function */}
                 <input {...register("username", {required: true})} placeholder="Pseudo" />
                 {errors.username && <span className="login-error">Le pseudo est obligatoire</span>}
@@ -35,12 +32,12 @@ export default function Login() {
                 {/* errors will return when field validation fails  */}
                 {errors.password && <span className="login-error">Le mot de passe est obligatoire</span>}
 
-                <input type="submit" value="Connexion"/>
+                <input type="submit" value="Inscription"/>
 
                 <hr className="hr-login"></hr>
 
-                <Link href="/register">
-                    <p className="signup-button">Inscription</p>
+                <Link href="/login">
+                    <p className="signup-button">Connexion</p>
                 </Link>
             </form>
         </>

@@ -61,19 +61,9 @@ export default function Navigation() {
                                     <Typography textAlign="center">Home</Typography>
                                 </MenuItem>
                             </Link>
-                            <Link href="/game" passHref>
+                            <Link href="/login" passHref>
                                 <MenuItem>
-                                    <Typography textAlign="center">Game</Typography>
-                                </MenuItem>
-                            </Link>
-                            <Link href="/products" passHref>
-                                <MenuItem>
-                                    <Typography textAlign="center">Produits</Typography>
-                                </MenuItem>
-                            </Link>
-                            <Link href="/messages" passHref>
-                                <MenuItem>
-                                    <Typography textAlign="center">Messages</Typography>
+                                    <Typography textAlign="center">Connexion</Typography>
                                 </MenuItem>
                             </Link>
                         </Menu>
@@ -86,25 +76,11 @@ export default function Navigation() {
                                 Home
                             </Button>
                         </Link>
-                        <Link href="/game" passHref>
+                        <Link href="/login" passHref>
                             <Button
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                Game
-                            </Button>
-                        </Link>
-                        <Link href="/products" passHref>
-                            <Button
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Produits
-                            </Button>
-                        </Link>
-                        <Link href="/messages" passHref>
-                            <Button
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Messages
+                                Connexion
                             </Button>
                         </Link>
                     </Box>
