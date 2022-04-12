@@ -58,7 +58,7 @@ export default function Navigation() {
                         >
                             <Link href="/" passHref>
                                 <MenuItem>
-                                    <Typography textAlign="center">Home</Typography>
+                                    <Typography textAlign="center">Évènements</Typography>
                                 </MenuItem>
                             </Link>
                             <Link href="/login" passHref>

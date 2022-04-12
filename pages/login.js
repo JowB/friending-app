@@ -2,16 +2,17 @@ import React from "react";
 import {useForm} from "react-hook-form";
 import axios from "axios";
 import Link from "next/link";
+import {useUser} from "../context/UserContext";
 
 export default function Login() {
-    // const {setToken} = useUser();
+    const {setToken} = useUser();
 
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
     const onSubmit = data => {
         axios.post('http://localhost:3001/auth/login', data)
             .then(response => {
                 console.log(response.data);
-                //setToken(response.data.access_token)
+                setToken(response.data.access_token)
             })
     };
 

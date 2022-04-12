@@ -18,7 +18,9 @@ export default function Default({children}) {
                 />
             </Head>
             <Navigation />
-            {children}
+            <div className="default-container">
+                {children}
+            </div>
         </div>
     )
 }

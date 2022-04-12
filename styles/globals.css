@@ -59,6 +59,12 @@ input[type="submit"] {
   color: darkred;
 }
 
+.default-container {
+  max-width: 1240px;
+  padding: 50px;
+  margin: auto;
+}
+
 input {
   display: block;
   box-sizing: border-box;
@@ -77,4 +83,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 20px;
+  width: 45%;
+}
+
+h2 {
+  margin: 0 0 10px;
+}
+
+img {
+  width: 100%;
 }
